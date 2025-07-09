@@ -107,4 +107,3 @@ Edit
 
 ---
 
-Let me know if you want to include badges, deployment links (e.g. Vercel or Netlify), or a sample screenshot.
