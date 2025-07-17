@@ -6,37 +6,39 @@ This is a simple and elegant **Quote Generator** web app built using **Node.js**
 
 ## 🚀 Features
 
-- 🎲 Generate random quotes with one click  
-- ⌛ Smooth loading animation before display  
-- 📋 Copy quotes directly to clipboard  
-- 🧠 Quotes stored in a local JSON file or fetched from an external API  
-- ⚙️ Built with modular and clean structure
+* 🎲 Generate random quotes with one click
+* ⌛ Smooth loading animation before display
+* 📋 Copy quotes directly to clipboard
+* 🧠 Quotes stored in a local JSON file or fetched from an external API
+* ⚙️ Built with modular and clean structure
 
 ---
 
 ## 🛠️ Technologies Used
 
-- Node.js  
-- Express.js  
-- HTML5 & CSS3  
-- Vanilla JavaScript  
-- Local JSON or External API (optional)
+* Node.js
+* Express.js
+* HTML5 & CSS3
+* Vanilla JavaScript
+* Local JSON or External API (optional)
 
 ---
 
 ## 📁 Project Structure
 
+```
 Quote_generator/
 │
 ├── public/
-│ ├── index.html
-│ ├── style.css
-│ └── script.js
+│   ├── index.html
+│   ├── style.css
+│   └── script.js
 │
 ├── quotes.json
 ├── server.js
 ├── package.json
 └── README.md
+```
 
 ---
 
@@ -48,19 +50,32 @@ Quote_generator/
 git clone https://github.com/zainIkram2812/Quote_generator.git
 cd Quote_generator
 npm install
+```
+
+### Step 2: Run the Server
+
+```bash
 node server.js
-Step 4: View in Browser
-Go to: http://localhost:3000
-🔄 Optional: Use External API
+```
+
+### Step 3: View in Browser
+
+Go to:
+
+```
+http://localhost:3000
+```
+
+---
+
+## 🔄 Optional: Use External API
+
 If you want to use an external quote API (like API Ninjas):
 
-Sign up and get an API key.
+1. Sign up and get an API key.
+2. In your `server.js`, replace the local file reading logic with:
 
-In your server.js, replace the local file reading logic with:
-
-js
-Copy
-Edit
+```js
 const fetch = require("node-fetch");
 
 app.get("/api/quote", async (req, res) => {
@@ -75,6 +90,11 @@ app.get("/api/quote", async (req, res) => {
     res.status(500).json({ error: "Failed to fetch quote" });
   }
 });
+```
+
+Example Quote Format:
+
+```json
 [
   {
     "quote": "Success is not final, failure is not fatal: It is the courage to continue that counts.",
@@ -85,25 +105,23 @@ app.get("/api/quote", async (req, res) => {
     "author": "Walt Disney"
   }
 ]
-🧠 Learnings & Concepts Covered
-Express routing and APIs
-
-Serving static files
-
-Fetch API & async/await
-
-JSON data handling
-
-DOM manipulation in JavaScript
-
-Error handling & UI feedback
-🙌 Author
-Zain Ikram
-GitHub: @zainIkram2812
-
-yaml
-Copy
-Edit
+```
 
 ---
+
+## 🧠 Learnings & Concepts Covered
+
+* Express routing and APIs
+* Serving static files
+* Fetch API & async/await
+* JSON data handling
+* DOM manipulation in JavaScript
+* Error handling & UI feedback
+
+---
+
+## 🙌 Author
+
+**Zain Ikram**
+GitHub: [@zainIkram2812](https://github.com/zainIkram2812)
 
